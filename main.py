@@ -10,9 +10,12 @@
 class Applicant:
     def __init__(self, info: str):
         info = [x for x in info.split(" ")]
-        self.name = str(info[0])
-        self.russ, self.math, self.phys = [str(info[x]) for x in range(1, 4)]
-        self.cert = bool(info[4])
+        self.surname, self.name, self.patronymic = [str(info[x]) for x in range(3)]
+        self.russ, self.math, self.phys = [int(info[x]) for x in range(3, 6)]
+        self.cert = bool(info[6])
+
+    def is_certified(self):
+        return self.cert
 
     def __str__(self):
         return " ".join(str(x) for x in self.__dict__.values())
@@ -21,7 +24,7 @@ class Applicant:
         return sum((self.russ, self.math, self.phys))
 
     def __lt__(self, other):
-        other = Applicant(other)
+        other = other
         if self.scores_sum() != other.scores_sum():
             return self.scores_sum() < other.scores_sum()
         elif self.math != other.math:
@@ -32,6 +35,27 @@ class Applicant:
             return self.russ < other.russ
 
 
+def read_from_file(filepath):
+    file = open(filepath, 'r')
+    apl_list = []
+    for row in file:
+        apl_list = Applicant(row)
+    file.close()
+    return apl_list
+
+
+def write_to_file(filepath, apl_list: list):
+    file = open(filepath, "w")
+    for apl in apl_list:
+        file.write(apl)
+        file.write("\n")
+    file.close()
+
+
+def get_accepted_list(n: int, apl_list: list):
+    # sorted([apl for apl in apl_list if apl.is_certified()])
+    return apl_list[n:]
+
+
 if __name__ == '__main__':
-    apl = Applicant("vasya 15 12 7 True")
-    print(apl)
+    write_to_file("output/output1.txt", get_accepted_list(6, read_from_file("input/input1.txt")))

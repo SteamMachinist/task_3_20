@@ -1,0 +1,17 @@
+Yolkin Tsezar Innokentievich 47 60 65 True
+Nikolayev Oleg Svyatoslavovich 45 51 60 False
+Buzinskaya Ida Larionovna 76 38 53 True
+Sitnikova Pavlinka Germanovna 87 73 30 True
+Dunayevsky Kvetoslav Filippovich 100 95 92 False
+Pozdnyakov Zigfrids Vadimovich 87 51 62 False
+Epinger Erik Timofeyevich 54 93 32 True
+Zakharina Yulinka Denisovna 35 72 85 True
+Vinokurov Boleslaw Vadimovich 48 62 91 True
+Potapov Lavrenti Larionovich 63 88 98 False
+Antakova Angelina Yermolayevna 98 57 94 True
+Rasputina Senta Savelievna 98 90 31 False
+Lagoshina Viola Vadimovna 97 96 53 True
+Onipchenko Danulka Valerianovna 39 88 50 True
+Shinsky Taras Igorevich 51 69 86 True
+Nechayev Kazimir Germanovich 63 33 78 False
+Yurnayev Damian Antonovich 87 33 30 True
