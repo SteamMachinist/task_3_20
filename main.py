@@ -57,4 +57,5 @@ def get_accepted_list(n: int, apl_list: list):
 
 
 if __name__ == '__main__':
-    write_to_file("output/output1.txt", get_accepted_list(6, read_from_file("input/input1.txt")))
+    accepted_list = get_accepted_list(6, read_from_file("input/input1.txt"))
+    write_to_file("output/output1.txt", accepted_list)
