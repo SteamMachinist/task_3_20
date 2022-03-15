@@ -1,1 +1,6 @@
-a
+Yurnayev Damian Antonovich 87 33 30 True
+Nikolayev Oleg Svyatoslavovich 45 51 60 True
+Buzinskaya Ida Larionovna 76 38 53 True
+Yolkin Tsezar Innokentievich 47 60 65 True
+Nechayev Kazimir Germanovich 63 33 78 True
+Onipchenko Danulka Valerianovna 39 88 50 True

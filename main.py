@@ -39,7 +39,7 @@ def read_from_file(filepath):
     file = open(filepath, 'r')
     apl_list = []
     for row in file:
-        apl_list = Applicant(row)
+        apl_list.append(Applicant(row))
     file.close()
     return apl_list
 
@@ -47,14 +47,13 @@ def read_from_file(filepath):
 def write_to_file(filepath, apl_list: list):
     file = open(filepath, "w")
     for apl in apl_list:
-        file.write(apl)
+        file.write(str(apl))
         file.write("\n")
     file.close()
 
 
 def get_accepted_list(n: int, apl_list: list):
-    # sorted([apl for apl in apl_list if apl.is_certified()])
-    return apl_list[n:]
+    return sorted([apl for apl in apl_list if apl.is_certified()])[:n]
 
 
 if __name__ == '__main__':
